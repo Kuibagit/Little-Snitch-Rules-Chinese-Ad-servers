@@ -11,14 +11,14 @@ import json
 
 class GenerateLittleSnitchRules():
 
-	HOST_FILE_URL 	= "https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt"
+	HOST_FILE_URL 	= "https://ghproxy.com/https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt"
 	OUT_FILENAME 	= "Ad_domain_list.lsrules"
 
 	def __init__(self):
 		self.data 		= self.fetch_data()
-		print(self.data)
+		#print(self.data)
 		self.rules		= self.extract_hosts(self.data)
-		print(self.rules)
+		#print(self.rules)
 		self.generate_ruleset(self.rules)
 
 	def fetch_data(self):
@@ -72,3 +72,4 @@ class GenerateLittleSnitchRules():
 
 if __name__ == '__main__':
 	GenerateLittleSnitchRules()
+	print("Update success!")
