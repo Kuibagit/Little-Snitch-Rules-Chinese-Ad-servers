@@ -12,7 +12,7 @@ import json
 class GenerateLittleSnitchRules():
 
 	HOST_FILE_URL 	= "https://raw.githubusercontent.com/VeleSila/yhosts/master/hosts.txt"
-	OUT_FILENAME 	= "chinese_adware_malware_list.lsrules"
+	OUT_FILENAME 	= "Ad_domain_list.lsrules"
 
 	def __init__(self):
 		self.data 		= self.fetch_data()
@@ -38,7 +38,7 @@ class GenerateLittleSnitchRules():
 		#----------------------------------------------------------------------
 
 		# Only keep hostnames that follow 0.0.0.0, while removing trailing comments.
-		pattern = re.compile("^127.0.0.1 ([^#]*)(#.*)?")
+		pattern = re.compile("^0.0.0.0 ([^#]*)(#.*)?")
 
 		rules = []
 
